@@ -1,0 +1,13 @@
+.:1053 {
+	idsapi {
+		files ./etc/luids/apiservices.json
+  }
+  xlisthole {
+    service xlist-check
+    listed-domain merge dns=refused
+    unlisted-domain dns=checkip
+    listed-ip merge dns=refused
+    unlisted-ip dns=return
+  }	
+  forward . 8.8.8.8 8.8.4.4
+}

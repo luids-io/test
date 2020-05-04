@@ -1,0 +1,12 @@
+{
+	"id": "cu007",
+	"name": "Testeo de eventproc con forwarding",
+	"tested": [ "eventproc", "eventnotify" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

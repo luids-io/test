@@ -1,0 +1,15 @@
+[
+  {
+    "name": "main",
+    "modules": [
+      {
+        "name": "forward",
+        "plugins": [
+          { "class": "forwarder", "args": [ "event-forward" ] }
+        ],
+        "onsuccess": "next",
+        "onerror": "stop"
+      }
+    ]
+  }
+]

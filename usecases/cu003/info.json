@@ -1,0 +1,12 @@
+{
+	"id": "cu003",
+	"name": "Testeo múltiples servidores xlist",
+	"tested": [ "xlistd", "xlistc" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

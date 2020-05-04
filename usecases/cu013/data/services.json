@@ -1,0 +1,10 @@
+[
+    {
+        "id": "dns",
+        "class": "dnsmdb",
+        "backend": "mongo1",
+        "opts": {
+            "dbname": "cu013"
+        }
+    }
+]

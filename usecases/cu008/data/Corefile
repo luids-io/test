@@ -1,0 +1,8 @@
+rbl.mizona.com.:1053 {
+    idsapi {
+        files ./etc/luids/apiservices.json
+    }
+    xlistrbl {
+        service xlist-check
+    }
+}

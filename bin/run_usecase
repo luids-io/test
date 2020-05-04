@@ -1,0 +1,36 @@
+#!/bin/bash
+
+[ $# -ne 1 ] && echo "required use case" && exit 1
+USECASE_ID=$1
+
+## define required variables
+SCRIPTDIR=$(dirname $(readlink -f "$0"))
+BASEDIR=$(dirname $SCRIPTDIR)
+
+## include core
+. $BASEDIR/lib/core.inc.sh
+## load usecase info
+USECASEDIR=${USECASESDIR}/${USECASE_ID}
+. $BASEDIR/lib/usecase.inc.sh
+
+## run use case
+msg "starting '$USECASE_ID': $USECASE_NAME"
+if [ "$USECASE_STAGE_PREPARE" != "" ]; then
+    ${STAGESDIR}/${USECASE_STAGE_PREPARE} || die "pre stage"
+fi
+if [ "$USECASE_STAGE_START" != "" ]; then
+    ${STAGESDIR}/${USECASE_STAGE_START} || die "start stage"
+fi
+runExit=0
+if [ "$USECASE_STAGE_RUN" != "" ]; then
+    ${STAGESDIR}/${USECASE_STAGE_RUN}
+    runExit=$?
+fi
+if [ "$USECASE_STAGE_STOP" != "" ]; then
+    ${STAGESDIR}/${USECASE_STAGE_STOP} || die "stop stage"
+fi
+#only clean if test exits ok
+if [ "$USECASE_STAGE_CLEAN" != "" ] && [ $runExit -eq 0 ]; then
+    ${STAGESDIR}/${USECASE_STAGE_CLEAN} || die "clean stage"
+fi
+msg "'$USECASE_ID' success"

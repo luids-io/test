@@ -1,0 +1,9 @@
+.:1053 {
+    idsapi {
+        files ./etc/luids/apiservices.json
+    }
+    resolvcache {
+        service dnsutil-resolvcache
+    }	
+    forward . 8.8.8.8 8.8.4.4
+}

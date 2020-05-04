@@ -1,0 +1,12 @@
+{
+	"id": "cu008",
+	"name": "Testeo zona dns blacklist con xlist",
+	"tested": [ "xlistd", "xlistc", "ludns" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

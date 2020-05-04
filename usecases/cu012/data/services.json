@@ -1,0 +1,72 @@
+[
+	{
+		"id": "lazy-worker",
+		"class": "mem",
+		"resources": [ "domain" ],
+		"opts": {
+			"reason": "lazy worker",
+			"data": [ 
+				{ "resource": "domain", "format": "plain", "value": "www.facebook.com" }
+			]
+		},
+		"wrappers": [
+			{ "class": "policy", "opts": { "dns": "return", "log": "true", "event": "info" } }
+		]
+	},
+	{
+		"id": "dirty-worker",
+		"class": "mem",
+		"resources": [ "domain" ],
+		"opts": {
+			"reason": "dirty worker",
+			"data": [ 
+				{ "resource": "domain", "format": "plain", "value": "www.xvideos.com" }
+			]
+		},
+		"wrappers": [
+			{ "class": "policy", "opts": { "dns": "ip:192.168.1.1", "log": "true", "event": "low" } }
+		]
+	},
+	{
+		"id": "malware",
+		"class": "mem",
+		"resources": [ "ip4", "domain" ],
+		"opts": {
+			"reason": "malware",
+			"data": [ 
+				{ "resource": "domain", "format": "plain", "value": "www.badsite.com" },
+				{ "resource": "ip4", "format": "plain", "value": "54.37.157.73"       }
+			]
+		},
+		"wrappers": [
+			{ "class": "policy", "opts": { "dns": "nxdomain", "log": "true", "event": "medium" } }
+		]
+	},
+	{
+		"id": "root",
+		"class": "selector",
+		"resources": [ "ip4", "domain" ],
+		"contains": [
+			{
+				"id": "service-ip",
+				"class": "sequence",
+				"resources": [ "ip4" ],
+				"contains": [
+					{ "id": "malware" }
+				],
+				"opts": { "first": true }
+			},
+			{
+				"id": "service-domain",
+				"class": "sequence",
+				"resources": [ "domain" ],
+				"contains": [
+					{ "id": "malware"      },
+					{ "id": "lazy-worker"  },
+					{ "id": "dirty-worker" }
+				],
+				"opts": { "first": true }
+			}
+		]
+	}
+]

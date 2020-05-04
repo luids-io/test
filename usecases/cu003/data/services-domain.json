@@ -1,0 +1,19 @@
+[
+	{
+		"id": "service-domain",
+		"class": "wbefore",
+		"resources": [ "domain" ],
+		"contains": [
+			{
+				"id": "whitelist-domain",
+				"class": "file",
+				"resources": [ "domain" ]
+			},		
+			{
+				"id": "blacklist-domain",
+				"class": "file",
+				"resources": [ "domain" ]
+			}		
+		]
+	}
+]

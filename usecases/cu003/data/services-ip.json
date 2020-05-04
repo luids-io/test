@@ -1,0 +1,19 @@
+[
+	{
+		"id": "service-ip",
+		"class": "wbefore",
+		"resources": [ "ip4" ],
+		"contains": [
+			{
+				"id": "whitelist-ip4",
+				"class": "file",
+				"resources": [ "ip4" ]
+			},		
+			{
+				"id": "blacklist-ip4",
+				"class": "file",
+				"resources": [ "ip4" ]
+			}		
+		]
+	}
+]

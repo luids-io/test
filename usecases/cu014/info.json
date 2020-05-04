@@ -1,0 +1,12 @@
+{
+	"id": "cu014",
+	"name": "Testeo básico de cache resolv",
+	"tested": [ "ludns", "resolvcache", "resolvcheck" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

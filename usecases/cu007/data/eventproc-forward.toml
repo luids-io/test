@@ -1,0 +1,20 @@
+[eventproc]
+datadir   = "./var/lib/luids/event"
+
+[eventproc.db]
+dirs    = [ "./etc/luids/event/event.d" ]
+
+[eventproc.stack]
+files   = [ "./etc/luids/event/stacks-forward.json" ]
+      
+[eventproc.api.notify]
+enable  = false
+
+[eventproc.api.forward]
+enable  = true
+
+[server]
+listenuri = "tcp://127.0.0.1:5852"
+
+[ids.api]
+files   = [ "./etc/luids/apiservices.json" ]

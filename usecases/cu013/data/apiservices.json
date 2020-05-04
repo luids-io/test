@@ -1,0 +1,7 @@
+[
+    {
+        "id": "dnsutil-archive",
+        "api": "luids.dnsutil.v1.Archive",
+        "endpoint": "tcp://127.0.0.1:5821"
+    }
+]

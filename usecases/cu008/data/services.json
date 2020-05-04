@@ -1,0 +1,22 @@
+[
+	{
+		"id": "root",
+		"class": "sequence",
+		"resources": [ "ip4", "domain" ],
+		"contains": [
+			{ 
+				"id": "rfc5728",
+				"class": "file",
+				"resources": [ "ip4", "domain" ],
+				"opts": {"reason": "rfc5728 compliance"}
+			},			
+			{
+				"id": "blacklist",
+				"class": "file",
+				"resources": [ "ip4", "domain" ],
+				"opts": {"reason": "blacklisted"}
+			}
+		],
+		"opts": {"first": true}
+	}
+]

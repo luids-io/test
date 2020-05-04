@@ -1,0 +1,11 @@
+[xlist]
+sourcesdir = "./var/lib/luids/xlist"
+
+[xlist.db]
+files      = [ "./etc/luids/xlist/services-domain.json" ]
+
+[xlist.api.check]
+rootid     = "service-domain"
+
+[server]
+listenuri  = "tcp://127.0.0.1:5802"

@@ -1,0 +1,45 @@
+[
+{
+	"id": "service-domain",
+	"class": "wbefore",
+	"resources": [ "domain" ],
+	"contains": [
+		{
+			"id": "whitelist-domain",
+			"class": "file",
+			"resources": [ "domain" ]
+		},		
+		{
+			"id": "blacklist-domain",
+			"class": "file",
+			"resources": [ "domain" ]
+		}		
+	]
+},
+{
+	"id": "service-ip4",
+	"class": "wbefore",
+	"resources": [ "ip4" ],
+	"contains": [
+		{
+			"id": "whitelist-ip4",
+			"class": "file",
+			"resources": [ "ip4" ]
+		},		
+		{
+			"id": "blacklist-ip4",
+			"class": "file",
+			"resources": [ "ip4" ]
+		}		
+	]
+},
+{
+	"id": "root",
+	"class": "selector",
+	"resources": [ "ip4", "domain" ],
+	"contains": [
+		{ "id": "service-ip4"    },
+		{ "id": "service-domain" }
+	]
+}
+]

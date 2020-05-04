@@ -1,0 +1,7 @@
+[ 
+    {
+        "id": "mongo1",
+        "class": "mongodb",
+        "url": "localhost:27017"
+    }
+]

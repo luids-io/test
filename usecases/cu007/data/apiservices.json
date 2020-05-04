@@ -1,0 +1,7 @@
+[
+    {
+        "id": "event-forward",
+        "api": "luids.event.v1.Forward",
+        "endpoint": "tcp://127.0.0.1:5852"
+    }
+]

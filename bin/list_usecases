@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## define required variables
+SCRIPTDIR=$(dirname $(readlink -f "$0"))
+BASEDIR=$(dirname $SCRIPTDIR)
+
+## include libs
+. $BASEDIR/lib/core.inc.sh
+
+for USECASEDIR in $USECASESDIR/*; do
+    if [ -f $USECASEDIR/info.json ]; then
+        ucid=`jq -r '.id' $USECASEDIR/info.json`
+        ucname=`jq -r '.name' $USECASEDIR/info.json`
+        uctested=`jq -r '(.tested // empty) |join(" ")' $USECASEDIR/info.json`
+        echo "${ucid}:${ucname}:$uctested"
+    fi
+done

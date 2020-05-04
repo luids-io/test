@@ -1,0 +1,12 @@
+{
+	"id": "cu013",
+	"name": "Testeo básico de archivado dns",
+	"tested": [ "ludns", "luarchive" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

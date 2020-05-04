@@ -1,0 +1,13 @@
+{
+	"id": "cu006",
+	"name": "Testeo básico de eventproc con archivado en mongo",
+	"tested": [ "eventproc", "eventnotify", "luarchive" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	},
+	"external": [ "mongodb" ]
+}

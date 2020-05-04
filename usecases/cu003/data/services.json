@@ -1,0 +1,19 @@
+[
+	{
+		"id": "root",
+		"class": "selector",
+		"resources": [ "ip4", "domain" ],
+		"contains": [
+			{
+				"id": "service-ip",
+				"class": "apicheck",
+				"resources": [ "ip4" ]
+			},
+			{
+				"id": "service-domain",
+				"class": "apicheck",
+				"resources": [ "domain" ]
+			}
+		]
+	}
+]

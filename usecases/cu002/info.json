@@ -1,0 +1,13 @@
+{
+	"id": "cu002",
+	"name": "Testeo básico de xlist usando servidores dns",
+	"tested": [ "xlistd", "xlistc" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	},
+	"external": [ "dns:barracudacentral.org", "dns:zen.spamhaus.org" ]
+}

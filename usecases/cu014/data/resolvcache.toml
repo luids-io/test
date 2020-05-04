@@ -1,0 +1,8 @@
+[resolvcache]
+expire   = 7200
+logfile  = "./var/lib/luids/dns/resolvcache.log"
+
+[resolvcache.limit]
+blocksize       = 1024
+maxblocksclient = 32
+maxnamesnode    = 32

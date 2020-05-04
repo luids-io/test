@@ -1,0 +1,9 @@
+[archive.backend]
+files   = [ "./etc/luids/archive/backends.json" ]
+
+[archive.service]
+files   = [ "./etc/luids/archive/services.json" ]
+
+[archive.api.event]
+enable  = true
+service = "event"

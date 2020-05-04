@@ -1,0 +1,15 @@
+[
+    {
+        "id": "alienvault.com",
+        "sources": [
+            {
+                "format": "flat",
+                "resources": [
+                    "ip4"
+                ],
+                "uri": "https://reputation.alienvault.com/reputation.generic"
+            }
+        ],
+        "update": "8h"
+    }
+]

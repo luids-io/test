@@ -1,0 +1,3 @@
+/tested/*
+!/tested/.keep
+/usecases/*/work

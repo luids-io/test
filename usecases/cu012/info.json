@@ -1,0 +1,12 @@
+{
+	"id": "cu012",
+	"name": "Testeo básico de dns sinkhole usando información retornada y eventos",
+	"tested": [ "xlistd", "xlistc", "ludns", "eventproc" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

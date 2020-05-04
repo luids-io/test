@@ -1,0 +1,4 @@
+[xlget]
+cache  = "./var/cache/luids/xlist"
+output = "./var/lib/luids/xlist"
+dirs   = [ "./etc/luids/xlist/sources.d" ]

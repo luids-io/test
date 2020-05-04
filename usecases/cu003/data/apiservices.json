@@ -1,0 +1,12 @@
+[
+    {
+        "id": "service-domain",
+        "api": "luids.xlist.v1.Check",
+        "endpoint": "tcp://127.0.0.1:5802"
+    },
+    {
+        "id": "service-ip",
+        "api": "luids.xlist.v1.Check",
+        "endpoint": "tcp://127.0.0.1:5803"
+    }
+]

@@ -1,0 +1,14 @@
+{
+	"id": "cu004",
+	"name": "Testeo básico de xlget",
+	"tested": [ "xlget" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"run": "run.sh",
+		"clean": "clean.sh"	
+	},
+	"external": [ 
+		"https://reputation.alienvault.com/reputation.generic",
+		"https://urlhaus.abuse.ch/downloads/hostfile/"
+	]
+}

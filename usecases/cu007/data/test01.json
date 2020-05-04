@@ -1,0 +1,9 @@
+[
+  {
+    "code": 10000,
+    "level": "info",
+    "data": {
+      "test": "test1"
+    }
+  }
+]

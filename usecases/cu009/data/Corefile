@@ -1,0 +1,17 @@
+rbl1.mizona.com.:1053 {
+    idsapi {
+        files ./etc/luids/apiservices.json
+    }
+    xlistrbl {
+        service xlist-rbl1
+    }
+}
+
+rbl2.mizona.com.:1053 {
+    idsapi {
+        files ./etc/luids/apiservices.json
+    }
+    xlistrbl {
+        service xlist-rbl2
+    }
+}
