@@ -6,7 +6,7 @@ defined ETCDIR || die "ETCDIR not defined"
 defined VARDIR || die "VARDIR not defined"
 
 defined MONGOCLI || MONGOCLI=/usr/bin/mongo
-which $MONGOCLI &>/dev/null || die "$MONGOCLI not found"
+[ -f $MONGOCLI ] || die "$MONGOCLI not found"
 
 function check_mongo() {
     $MONGOCLI --eval 'db.version()' &>/dev/null
