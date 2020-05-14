@@ -1,0 +1,12 @@
+{
+	"id": "cu016",
+	"name": "Testeo de procesado básico de conexión tls online",
+	"tested": [ "netanlocal" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

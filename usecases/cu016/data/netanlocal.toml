@@ -1,0 +1,9 @@
+[netanalyze]
+localnets = [ "192.168.69.0/24" ]
+
+[netanalyze.plugin]
+files     = [ "./etc/luids/netanalyze/plugins.json" ]
+
+[netanalyze.capture]
+bpf       = "(port 443)"
+ifaces    = [ "enp4s0" ]
