@@ -1,0 +1,3 @@
+[netanalyze.capture]
+bpf       = "(port 443)"
+ifaces    = [ "enp4s0" ]
