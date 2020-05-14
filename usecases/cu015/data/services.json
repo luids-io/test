@@ -1,0 +1,10 @@
+[
+    {
+        "id": "tls",
+        "class": "tlsmdb",
+        "backend": "mongo1",
+        "opts": {
+            "dbname": "cu015"
+        }
+    }
+]

@@ -1,0 +1,12 @@
+{
+	"id": "cu015",
+	"name": "Testeo de archivado de pcap de tráfico tls en mongo",
+	"tested": [ "tlsarchivepcap", "tlsapconv", "tlsarchiveap", "luarchive" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}
