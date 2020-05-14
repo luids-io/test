@@ -1,0 +1,9 @@
+[
+    {
+        "name": "tls-inspect",
+        "class": "tlsproc",
+        "actions": [
+            { "name": "clienthello", "class": "clienthello" }
+        ]
+    }
+]

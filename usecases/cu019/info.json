@@ -1,0 +1,12 @@
+{
+	"id": "cu019",
+	"name": "Testeo de procesado cliente-servidor tlsap de conexión tls online",
+	"tested": [ "netanclient", "netanserver" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}
