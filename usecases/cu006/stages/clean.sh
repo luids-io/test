@@ -17,7 +17,7 @@ running_luarchive && die "luarchive is running"
 running_eventproc && die "eventproc is running"
 
 ## drop database
-$MONGOCLI --quiet $USECASE --eval "db.dropDatabase()" &>$RUNDIR/clean.log
+$MONGOCLI --quiet $USECASE_ID --eval "db.dropDatabase()" &>$RUNDIR/clean.log
 [ $? -eq 0 ] || die "drop database $USECASE_ID"
 
 ## do clean

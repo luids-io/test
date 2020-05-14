@@ -12,6 +12,7 @@ defined BINDIR || BINDIR=$WORKDIR/bin
 defined RUNDIR || RUNDIR=$WORKDIR/run
 defined ETCDIR || ETCDIR=$WORKDIR/etc
 defined VARDIR || VARDIR=$WORKDIR/var
+defined TMPDIR || TMPDIR=$WORKDIR/tmp
 
 ## read USE CASE info
 [ -f $USECASEDIR/info.json ] || die "$USECASEDIR/info.json not found"
@@ -62,6 +63,7 @@ function create_workdir() {
     mkdir -p $RUNDIR || return $?
     mkdir -p $ETCDIR || return $?
     mkdir -p $VARDIR || return $?
+    mkdir -p $TMPDIR || return $?
 }
 
 function copy_tested() {
