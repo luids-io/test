@@ -1,0 +1,12 @@
+{
+	"id": "cu018",
+	"name": "Testeo de procesado cliente-servidor layer3 de conexión tls online",
+	"tested": [ "netanclient", "netanserver" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}
