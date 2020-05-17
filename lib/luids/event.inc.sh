@@ -29,7 +29,9 @@ function stop_eventproc() {
     [ -f $RUNDIR/eventproc${instance}.pid ] || return 1
     SPID=`cat $RUNDIR/eventproc${instance}.pid`
     kill $SPID 2>/dev/null
+    local ecode=$?
     sleep $WAITSECS
+    return $ecode
 }
 
 function running_eventproc() {

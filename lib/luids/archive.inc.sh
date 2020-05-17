@@ -36,7 +36,9 @@ function stop_luarchive() {
     [ -f $RUNDIR/luarchive${instance}.pid ] || return 1
     SPID=`cat $RUNDIR/luarchive${instance}.pid`
     kill $SPID 2>/dev/null
+    local ecode=$?
     sleep $WAITSECS
+    return $ecode
 }
 
 function running_luarchive() {

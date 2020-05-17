@@ -29,7 +29,9 @@ function stop_xlistd() {
     [ -f $RUNDIR/xlistd${instance}.pid ] || return 1
     SPID=`cat $RUNDIR/xlistd${instance}.pid`
     kill $SPID 2>/dev/null
+    local ecode=$?
     sleep $WAITSECS
+    return $ecode
 }
 
 function running_xlistd() {

@@ -32,7 +32,9 @@ function stop_ludns() {
     [ -f $RUNDIR/ludns${instance}.pid ] || return 1
     SPID=`cat $RUNDIR/ludns${instance}.pid`
     kill $SPID 2>/dev/null
+    local ecode=$?
     sleep $WAITSECS
+    return $ecode
 }
 
 function running_ludns() {
