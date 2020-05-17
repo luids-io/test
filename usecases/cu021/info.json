@@ -1,0 +1,13 @@
+{
+	"id": "cu021",
+	"name": "Testeo de procesado de conexión tls online con servidor brain opencpu",
+	"tested": [ "netanlocal", "lubrain" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	},
+	"external": [ "http://10.231.14.142/ocpu" ]
+}

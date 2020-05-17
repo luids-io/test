@@ -1,0 +1,8 @@
+[
+    {
+        "id": "tlscon",
+        "class": "generic",
+        "model": "tlscon",
+        "backend": "opencpu1"
+    }
+]

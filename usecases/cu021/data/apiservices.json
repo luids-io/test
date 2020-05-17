@@ -1,0 +1,7 @@
+[
+    {
+        "id": "tlsutil-classifier",
+        "api": "luids.tlsutil.v1.Classify",
+        "endpoint": "tcp://127.0.0.1:5831"
+    }
+]

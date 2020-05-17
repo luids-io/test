@@ -1,0 +1,12 @@
+{
+	"id": "cu020",
+	"name": "Testeo de procesado de conexión tls online con servidor brain dummy",
+	"tested": [ "netanlocal", "lubrain" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

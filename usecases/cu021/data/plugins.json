@@ -1,0 +1,17 @@
+[
+    {
+        "name": "tls-inspect",
+        "class": "tlsproc",
+        "actions": [
+            {
+                "name": "classify", 
+                "class": "classifycon",
+                "services": { "classifier": "tlsutil-classifier" },
+                "policy": {
+                    "positive": { "log": true },
+                    "negative": { "log": true }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,8 @@
+[classify.backend]
+files      = [ "./etc/luids/brain/backends.json" ]
+
+[classify.classifier]
+files      = [ "./etc/luids/brain/classifiers.json" ]
+
+[classify.api.tls]
+connections   = "tlscon"
