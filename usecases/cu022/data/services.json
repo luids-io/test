@@ -1,0 +1,15 @@
+[
+	{
+		"id": "root",
+		"class": "mem",
+		"resources": [ "ip4", "domain", "md5", "sha1" ],
+		"opts": {
+			"reason": "blacklisted",
+			"data": [ 
+				{ "resource": "ip4", "format": "plain", "value": "54.37.157.73" },
+				{ "resource": "domain", "format": "plain", "value": "www.luisguillen.com" },
+				{ "resource": "md5", "format": "plain", "value": "00bcd759cb8ad485fdbf1e7a0c5b94b4" }				
+			]
+		}
+	}
+]

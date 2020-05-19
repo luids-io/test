@@ -1,0 +1,34 @@
+[
+    {
+        "name": "tls-inspect",
+        "class": "tlsproc",
+        "actions": [
+            {
+                "name": "checkip", 
+                "class": "checkip",
+                "services": { "xlist": "xlist-check" },
+                "policy": { "positive": { "log": true } }
+            },
+            {
+                "name": "checksni", 
+                "class": "checksni",
+                "services": { "xlist": "xlist-check" },
+                "policy": { "positive": { "log": true } }
+            },
+            {
+                "name": "checkja3", 
+                "class": "checkja3",
+                "services": { "xlist": "xlist-check" },
+                "policy": { "positive": { "log": true } }
+            },
+            {
+                "name": "checkcertfp",
+                "class": "checkcertfp",
+                "services": { "xlist": "xlist-check" },
+                "policy": { "positive": { "log": true }, "negative": { "log": true } },
+                "opts": { "hashalg": "sha1" }
+            }
+
+        ]
+    }
+]

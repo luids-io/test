@@ -1,0 +1,12 @@
+{
+	"id": "cu022",
+	"name": "Testeo de procesado de conexión tls online con servidor xlist",
+	"tested": [ "netanlocal", "xlistd" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}
