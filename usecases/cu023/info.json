@@ -1,0 +1,10 @@
+{
+	"id": "cu023",
+	"name": "Testeo de procesado básico de conexión tls offline",
+	"tested": [ "netanoffline" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"run": "run.sh",
+		"clean": "clean.sh"	
+	}
+}

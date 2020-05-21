@@ -181,3 +181,20 @@ function showlog_netanserver() {
     [ -f $RUNDIR/netanserver${instance}.log ] || return 1
     cat $RUNDIR/netanserver${instance}.log
 }
+
+function run_netanoffline() {
+    [ $# -eq 1 ] || die "invalid number of params"
+    local pcapfile=$1
+    [ -f "$pcapfile" ] || return 1
+
+    pushd $WORKDIR >/dev/null
+    $BINDIR/netanoffline --config $ETCDIR/luids/netanalyze/netanoffline.toml -i $pcapfile &>$RUNDIR/netanoffline.log
+    ecode=$?
+    popd >/dev/null
+    return $ecode
+}
+
+function showlog_netanoffline() {
+    [ -f $RUNDIR/netanoffline.log ] || return 1
+    cat $RUNDIR/netanoffline.log
+}
