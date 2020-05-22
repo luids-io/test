@@ -32,4 +32,4 @@ prepare_workdir() {
 create_workdir || die "creating workdir"
 copy_tested || die "copy tested binaries"
 prepare_workdir || die "preparing workdir"
-#dryrun_resolvcache &>$RUNDIR/pre.log || die "testing config resolvcache"
+dryrun_resolvcache &>$RUNDIR/pre.log || die "testing config resolvcache"
