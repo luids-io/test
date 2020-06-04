@@ -6,7 +6,7 @@ function warn() { echo "warn: $@" 1>&2 ; }
 function msg() { echo "$@" ; }
 function step() { echo -n "* $@..." ; }
 function step_ok() { echo " OK" ; }
-function step_err() { echo " ERROR" ; }
+function step_err() { if [ $# -ne 0 ]; then echo " ERROR: $@" ; else echo " ERROR" ; fi; }
 
 defined BASEDIR || die "BASEDIR is required"
 defined TESTEDDIR || TESTEDDIR=$BASEDIR/tested
