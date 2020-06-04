@@ -1,0 +1,7 @@
+[
+    {
+        "id": "tlsutil-notary",
+        "api": "luids.tlsutil.v1.Notary",
+        "endpoint": "tcp://127.0.0.1:5871"
+    }
+]
