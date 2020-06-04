@@ -22,6 +22,7 @@ prepare_workdir() {
     ##config tlsnotary
     mkdir -p $ETCDIR/luids/notary || return $?
     cp $DATADIR/tlsnotary.toml $ETCDIR/luids/notary || return $?
+    cp $DATADIR/verifiers.json $ETCDIR/luids/notary || return $?
 }
 
 create_workdir || die "creating workdir"
