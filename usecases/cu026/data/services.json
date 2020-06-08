@@ -1,0 +1,14 @@
+[
+	{
+		"id": "root",
+		"class": "mem",
+		"resources": [ "sha1" ],
+		"opts": {
+			"reason": "blacklisted",
+			"data": [ 
+				{ "resource": "sha1", "format": "plain", "value": "209bacc532c928a441f21728871a1a555f12d75e" }
+			]
+		},
+		"wrappers": [ { "class": "logger", "opts": { "found": "info", "notfound": "info", "error": "warn", "showpeer": true } } ]
+	}
+]

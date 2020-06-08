@@ -1,0 +1,2 @@
+[xlist.db]
+files      = [ "./etc/luids/xlist/services.json" ]

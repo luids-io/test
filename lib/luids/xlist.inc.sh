@@ -57,6 +57,15 @@ function dryrun_xlistd() {
     return $ecode
 }
 
+function showlog_xlistd() {
+    local instance=$1
+    if [ "$instance" != "" ]; then
+        instance="-$instance"
+    fi
+    [ -f $RUNDIR/xlistd${instance}.log ] || return 1
+    cat $RUNDIR/xlistd${instance}.log
+}
+
 ## manage xlget services
 function start_xlget() {
     local instance=$1

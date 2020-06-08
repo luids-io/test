@@ -1,0 +1,5 @@
+[tlsnotary.db]
+files      = [ "./etc/luids/notary/verifiers.json" ]
+
+[ids.api]
+files   = [ "./etc/luids/apiservices.json" ]

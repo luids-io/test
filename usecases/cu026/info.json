@@ -1,0 +1,12 @@
+{
+	"id": "cu026",
+	"name": "Testeo avanzado de tlsnotary",
+	"tested": [ "tlsnotary", "tlsnotarycli", "xlistd" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}
