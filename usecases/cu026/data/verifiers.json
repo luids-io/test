@@ -4,10 +4,6 @@
 		"class": "sequence",
 		"contains": [
 			{
-				"id": "trustedCA",
-				"class": "trusted"
-			},
-			{
 				"id": "blacklist",
 				"class": "xlisted",
 				"services": { "xlist": "xlist-check" },
