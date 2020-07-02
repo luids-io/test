@@ -15,22 +15,33 @@ USECASEDIR=${USECASESDIR}/${USECASE_ID}
 
 ## run use case
 msg "starting '$USECASE_ID': $USECASE_NAME"
+
 if [ "$USECASE_STAGE_PREPARE" != "" ]; then
     ${STAGESDIR}/${USECASE_STAGE_PREPARE} || die "pre stage"
 fi
+
 if [ "$USECASE_STAGE_START" != "" ]; then
     ${STAGESDIR}/${USECASE_STAGE_START} || die "start stage"
 fi
+
 runExit=0
 if [ "$USECASE_STAGE_RUN" != "" ]; then
     ${STAGESDIR}/${USECASE_STAGE_RUN}
     runExit=$?
 fi
+
 if [ "$USECASE_STAGE_STOP" != "" ]; then
     ${STAGESDIR}/${USECASE_STAGE_STOP} || die "stop stage"
 fi
+
 #only clean if test exits ok
 if [ "$USECASE_STAGE_CLEAN" != "" ] && [ $runExit -eq 0 ]; then
     ${STAGESDIR}/${USECASE_STAGE_CLEAN} || die "clean stage"
 fi
+
+if [ $runExit -ne 0 ]; then
+	msg "'$USECASE_ID' fail"
+	exit $runExit
+fi
 msg "'$USECASE_ID' success"
+
