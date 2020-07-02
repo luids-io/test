@@ -30,7 +30,7 @@ test01() {
     $CURLCMD $CURLOPT "https://www.luisguillen.com" &>$testlog
     [ $? -ne 0 ] && step_err && return 1
 
-    sleep 4
+    sleep 6
     showlog_netanlocal | grep "www.luisguillen.com" | grep -q "malware"
     [ $? -ne 0 ] && step_err && return 1
 
