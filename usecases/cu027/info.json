@@ -1,0 +1,12 @@
+{
+	"id": "cu027",
+	"name": "Testeo básico de tlsnotary con backend bolt",
+	"tested": [ "tlsnotary", "tlsnotarycli" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

@@ -1,0 +1,6 @@
+[tlsnotary]
+log     = true
+datadir = "./var/lib/luids/notary"
+
+[tlsnotary.storage]
+backend = "bolt"

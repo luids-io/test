@@ -1,3 +1,6 @@
+[tlsnotary]
+log = true
+
 [tlsnotary.plugin]
 root     = "root"
 files    = [ "./etc/luids/notary/verifiers.json" ]
