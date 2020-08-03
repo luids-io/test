@@ -9,5 +9,5 @@
 		"stop": "stop.sh",
 		"clean": "clean.sh"	
 	},
-	"external": [ "http://10.231.14.142/ocpu" ]
+	"external": [ "http://localhost:8004/ocpu" ]
 }

@@ -2,7 +2,7 @@
     {
         "id": "opencpu1",
         "class": "opencpu",
-        "url": "http://10.231.14.142",
+        "url": "http://localhost:8004",
         "opts": {
             "method": "connection2_predict",
             "library": "luidsbrain"
