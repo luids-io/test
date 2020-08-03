@@ -1,7 +1,6 @@
-[xlist.db]
+[xlist.service]
 files      = [ "./etc/luids/xlist/services.json" ]
 
-[xlist.api.check]
-rootid     = "root"
+[service.xlist.check]
 disclosure = true
 exposeping = true

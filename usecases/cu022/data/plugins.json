@@ -19,7 +19,7 @@
                 "name": "checkja3", 
                 "class": "checkja3",
                 "services": { "xlist": "xlist-check" },
-                "policy": { "positive": { "log": true } }
+                "policy": { "positive": { "log": true }, "negative": { "log": true } }
             },
             {
                 "name": "checkcertfp",

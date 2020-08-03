@@ -1,11 +1,8 @@
 [xlist]
-sourcesdir = "./var/lib/luids/xlist"
+datadir = "./var/lib/luids/xlist"
 
-[xlist.db]
+[xlist.service]
 files      = [ "./etc/luids/xlist/services-rbl2.json" ]
-
-[xlist.api.check]
-rootid     = "root"
 
 [server]
 listenuri  = "tcp://127.0.0.1:5802"

@@ -29,7 +29,7 @@ test01() {
     step "$testname: capture and test notary checks"
 
     ## disable session for upload certs
-    CURLOPT="--tlsv1.2 --no-keepalive --no-sessionid"
+    CURLOPT="--tlsv1.2 --no-keepalive --tls-max 1.2 --no-sessionid"
     $CURLCMD $CURLOPT "https://www.luisguillen.com" &>$testlog
     [ $? -ne 0 ] && step_err "running curl" && return 1
 

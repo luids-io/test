@@ -1,10 +1,10 @@
 [xlist]
-sourcesdir = "./var/lib/luids/xlist"
+datadir = "./var/lib/luids/xlist"
 
-[xlist.db]
+[xlist.service]
 files      = [ "./etc/luids/xlist/services-ip.json" ]
 
-[xlist.api.check]
+[service.xlist.check]
 rootid     = "service-ip"
 
 [server]

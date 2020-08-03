@@ -1,8 +1,5 @@
 [xlist]
-sourcesdir = "./var/lib/luids/xlist"
+datadir = "./var/lib/luids/xlist"
 
-[xlist.db]
+[xlist.service]
 files      = [ "./etc/luids/xlist/services.json" ]
-
-[xlist.api.check]
-rootid     = "root"
