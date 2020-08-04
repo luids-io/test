@@ -7,10 +7,10 @@ dirs    = [ "./etc/luids/event/event.d" ]
 [eventproc.stack]
 files   = [ "./etc/luids/event/stacks-forward.json" ]
       
-[eventproc.api.notify]
+[service.event.notify]
 enable  = false
 
-[eventproc.api.forward]
+[service.event.forward]
 enable  = true
 
 [server]
