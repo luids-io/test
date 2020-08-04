@@ -1,8 +1,9 @@
 [resolvcache]
 expire   = 7200
-logfile  = "./var/lib/luids/dns/resolvcache.log"
 
-[resolvcache.limit]
-blocksize       = 1024
-maxblocksclient = 32
-maxnamesnode    = 32
+[resolvcache.trace]
+file  = "./var/lib/luids/dns/resolvcache.log"
+
+[resolvcache.dump]
+file  = "./var/lib/luids/dns/cache-dump.log"
+secs  = 60
