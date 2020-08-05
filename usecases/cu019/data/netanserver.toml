@@ -4,9 +4,9 @@ localnets = [ "192.168.69.0/24" ]
 [netanalyze.plugin]
 files     = [ "./etc/luids/netanalyze/plugins.json" ]
 
-[netanalyze.api.packet]
+[service.netutil.analyze]
 enable  = false
 
-[netanalyze.api.tls]
+[service.tlsutil.analyze]
 enable  = true
 plugin  = "tls-inspect"
