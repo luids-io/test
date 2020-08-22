@@ -1,0 +1,12 @@
+{
+	"id": "cu028",
+	"name": "Testeo de cola netfilter con servidor xlist",
+	"tested": [ "lunfqueue", "xlistd" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

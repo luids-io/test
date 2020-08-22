@@ -1,0 +1,13 @@
+[
+	{
+		"id": "root",
+		"class": "mem",
+		"resources": [ "ip4" ],
+		"opts": {
+			"reason": "blacklisted",
+			"data": [ 
+				{ "resource": "ip4", "format": "plain", "value": "54.37.157.73" }
+			]
+		}
+	}
+]
