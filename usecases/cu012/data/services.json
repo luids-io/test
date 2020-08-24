@@ -10,7 +10,7 @@
 			]
 		},
 		"wrappers": [
-			{ "class": "policy", "opts": { "dns": "return", "log": "true", "event": "info" } }
+			{ "class": "policy", "opts": { "value": "dns=return,log=true,event=info" } }
 		]
 	},
 	{
@@ -24,7 +24,7 @@
 			]
 		},
 		"wrappers": [
-			{ "class": "policy", "opts": { "dns": "ip:192.168.1.1", "log": "true", "event": "low" } }
+			{ "class": "policy", "opts": { "value": "dns=ip:192.168.1.1,log=true,event=low" } }
 		]
 	},
 	{
@@ -39,7 +39,7 @@
 			]
 		},
 		"wrappers": [
-			{ "class": "policy", "opts": { "dns": "nxdomain", "log": "true", "event": "medium" } }
+			{ "class": "policy", "opts": { "value": "dns=nxdomain,log=true,event=medium" } }
 		]
 	},
 	{
