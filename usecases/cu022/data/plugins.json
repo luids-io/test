@@ -7,28 +7,37 @@
                 "name": "checkip", 
                 "class": "checkip",
                 "services": { "xlist": "xlist-check" },
-                "policy": { "positive": { "log": true } }
+                "rules": [
+                    { "when": "listed", "rule": { "log": true } }
+                ]
             },
             {
                 "name": "checksni", 
                 "class": "checksni",
                 "services": { "xlist": "xlist-check" },
-                "policy": { "positive": { "log": true } }
+                "rules": [
+                    { "when": "listed", "rule": { "log": true } }
+                ]
             },
             {
                 "name": "checkja3", 
                 "class": "checkja3",
                 "services": { "xlist": "xlist-check" },
-                "policy": { "positive": { "log": true }, "negative": { "log": true } }
+                "rules": [
+                    { "when": "listed",   "rule": { "log": true } },
+                    { "when": "unlisted", "rule": { "log": true } }
+                ]
             },
             {
                 "name": "checkcertfp",
                 "class": "checkcertfp",
                 "services": { "xlist": "xlist-check" },
-                "policy": { "positive": { "log": true }, "negative": { "log": true } },
-                "opts": { "hashalg": "sha1" }
+                "opts": { "hashalg": "sha1" },
+                "rules": [
+                    { "when": "listed",   "rule": { "log": true } },
+                    { "when": "unlisted", "rule": { "log": true } }
+                ]
             }
-
         ]
     }
 ]

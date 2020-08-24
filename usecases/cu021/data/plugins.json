@@ -7,10 +7,10 @@
                 "name": "classify", 
                 "class": "classifycon",
                 "services": { "classifier": "tlsutil-classifier" },
-                "policy": {
-                    "positive": { "log": true },
-                    "negative": { "log": true }
-                }
+                "rules": [
+                    { "when": "malware", "rule": { "log": true } },
+                    { "when": "normal",  "rule": { "log": true } }
+                ]
             }
         ]
     }

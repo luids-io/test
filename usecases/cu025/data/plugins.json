@@ -7,7 +7,10 @@
                 "name": "notary", 
                 "class": "notary",
                 "services": { "notary": "tlsutil-notary" },
-                "policy": { "positive": { "log": true }, "negative": { "log": true } }
+                "rules": [
+                    { "when": "valid",   "rule": { "log": true } },
+                    { "when": "invalid", "rule": { "log": true } }
+                ]
             }
         ]
     }
