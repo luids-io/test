@@ -1,0 +1,12 @@
+{
+	"id": "cu029",
+	"name": "Testeo de cola netfilter con servidor cache resolv",
+	"tested": [ "lunfqueue", "resolvcache", "resolvcollect" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

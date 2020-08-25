@@ -1,0 +1,7 @@
+[
+    {
+        "id": "dnsutil-resolvcache",
+        "api": "luids.dnsutil.v1.ResolvCheck",
+        "endpoint": "tcp://127.0.0.1:5891"
+    }
+]

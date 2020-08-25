@@ -1,0 +1,17 @@
+[
+    {
+        "name": "ip-processor",
+        "class": "ipp",
+        "actions": [
+            {
+                "name": "checkresolv", 
+                "class": "checkresolv",
+                "services": { "resolvcache": "dnsutil-resolvcache" },
+                "rules": [
+                    { "when": "resolved",   "rule": { "verdict": "accept" } },
+                    { "when": "unresolved", "rule": { "log": true, "verdict": "drop" } }
+                ]
+            }
+        ]
+    }
+]
