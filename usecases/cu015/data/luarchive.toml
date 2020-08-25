@@ -4,6 +4,6 @@ files   = [ "./etc/luids/archive/backends.json" ]
 [archive.service]
 files   = [ "./etc/luids/archive/services.json" ]
 
-[archive.api.tls]
+[service.tlsutil.archive]
 enable  = true
 service = "tls"
