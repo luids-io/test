@@ -1,4 +1,4 @@
-[xlist.service]
+[xlistd.service]
 files      = [ "./etc/luids/xlist/services.json" ]
 
 [service.xlist.check]
