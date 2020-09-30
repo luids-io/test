@@ -1,5 +1,5 @@
 [nfqueue]
-localnets = [ "192.168.69.0/24" ]
+localnets = [ "127.0.0.0/8", "192.168.0.0/16" ]
 qids      = [ 100 ]
 
 [nfqueue.plugin]
