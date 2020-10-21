@@ -1,0 +1,13 @@
+[
+	{
+		"id": "root",
+		"class": "mem",
+		"resources": [ "domain" ],
+		"opts": {
+			"reason": "blacklisted in view1",
+			"data": [ 
+				{ "resource": "domain", "format": "plain", "value": "www.facebook.com" }
+			]
+		}
+	}
+]

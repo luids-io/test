@@ -1,0 +1,5 @@
+[xlistd]
+datadir = "./var/lib/luids/xlist"
+
+[xlistd.service]
+files      = [ "./etc/luids/xlist/services-main.json" ]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "root",
+		"class": "mem",
+		"resources": [ "domain" ],
+		"opts": {
+			"reason": "blacklisted",
+			"data": [ 
+				{ "resource": "domain", "format": "plain", "value": "www.google.com" }
+			]
+		}
+	}
+]

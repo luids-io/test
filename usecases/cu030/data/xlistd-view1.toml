@@ -1,0 +1,8 @@
+[xlistd]
+datadir = "./var/lib/luids/xlist"
+
+[xlistd.service]
+files      = [ "./etc/luids/xlist/services-view1.json" ]
+
+[server]
+listenuri  = "tcp://127.0.0.1:5802"

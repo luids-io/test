@@ -1,0 +1,10 @@
+.:1053 {
+  idsapi {
+    files ./etc/luids/apiservices.json
+  }
+  xlisthole {
+    service xlist-check
+    service-view xlist-view1 127.0.0.0/8
+  }	
+  forward . 8.8.8.8 8.8.4.4
+}
