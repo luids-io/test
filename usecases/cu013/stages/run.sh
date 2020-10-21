@@ -59,7 +59,7 @@ test02() {
     result=`$MONGOCLI --quiet $USECASE_ID --eval "$query" 2>>$testlog`
     [ $? -ne 0 ] && step_err && return 1
 
-    echo "$result" | grep 'returncode" : 3' &>>$testlog
+    echo "$result" | grep 'returnCode" : 3' &>>$testlog
     [ $? -ne 0 ] && step_err && return 1
 
     step_ok
