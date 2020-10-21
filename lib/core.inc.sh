@@ -19,3 +19,7 @@ which jq >/dev/null || die "jq is required"
 function check_connection() {
     ping -c 1 www.google.com &>/dev/null
 }
+
+function check_localip() {
+    ip addr show | grep -q "inet $1/"
+}

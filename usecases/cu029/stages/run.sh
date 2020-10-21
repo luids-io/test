@@ -18,6 +18,7 @@ exists_workdir || die "workdir doesn't exists"
 running_resolvcache || die "resolvcache is not running"
 running_lunfqueue || die "lunfqueue is not running"
 [ -f $CURLCMD ] || die "curl not found"
+check_localip $LOCALIP || die "LOCALIP $LOCALIP not found"
 
 # do tests
 test01() {
