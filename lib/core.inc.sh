@@ -9,9 +9,11 @@ function step_ok() { echo " OK" ; }
 function step_err() { if [ $# -ne 0 ]; then echo " ERROR: $@" ; else echo " ERROR" ; fi; }
 
 defined BASEDIR || die "BASEDIR is required"
+## read custom environment
+[ -f $BASEDIR/.env ] && source $BASEDIR/.env
+
 defined TESTEDDIR || TESTEDDIR=$BASEDIR/tested
 defined USECASESDIR || USECASESDIR=$BASEDIR/usecases
-
 defined WAITSECS || WAITSECS=1 ## wait secs start-shutdown services
 
 which jq >/dev/null || die "jq is required"
