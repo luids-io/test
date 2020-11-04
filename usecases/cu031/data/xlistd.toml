@@ -1,0 +1,8 @@
+[xlistd]
+datadir = "./var/lib/luids/xlist"
+
+[xlistd.service]
+files      = [ "./etc/luids/xlist/services.json" ]
+
+[xlistd.plugin.sblookup]
+apikey  = "%APIKEY%"

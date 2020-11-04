@@ -1,0 +1,12 @@
+{
+	"id": "cu031",
+	"name": "Testeo básico de google safe browsing api",
+	"tested": [ "xlistd", "xlistc" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

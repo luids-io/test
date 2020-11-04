@@ -1,0 +1,33 @@
+[
+  {
+    "id": "sb-malware",
+    "class": "sblookup",
+    "resources": [ "domain" ],
+    "opts": { 
+      "threats": [ "malware", "unwanted" ],
+      "reason": "found in 'sb-malware'"
+    }
+  },
+  {
+    "id": "sb-phising",
+    "class": "sblookup",
+    "resources": [ "domain" ],
+    "opts": { 
+      "apikey": "%APIKEY%",
+      "threats": [ "phising" ],
+      "reason": "found in 'sb-phising'"
+    }
+  },
+  {
+    "id": "root",
+    "class": "parallel",
+    "resources": [ "domain" ],
+    "contains": [
+      { "id": "sb-malware" }, 
+      { "id": "sb-phising" }
+    ],
+    "wrappers": [
+      { "class": "cache", "opts": { "ttl": 300, "negativettl": -1 } }
+    ]  
+  }
+]
