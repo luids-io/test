@@ -18,6 +18,7 @@ prepare_workdir() {
     mkdir -p $ETCDIR/luids/xlist/sources.d || return $?
     mkdir -p $VARDIR/cache/luids/xlist || return $?
     mkdir -p $VARDIR/lib/luids/xlist || return $?
+    mkdir -p $VARDIR/lib/luids/xlist/status || return $?
     cp $DATADIR/xlget.toml $ETCDIR/luids/xlist || return $?
     cp $DATADIR/*.json $ETCDIR/luids/xlist/sources.d || return $?
 }
