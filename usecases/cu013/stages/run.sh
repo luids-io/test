@@ -65,6 +65,33 @@ test02() {
     step_ok
 }
 
+test03() {
+    local testname=$FUNCNAME
+    local testlog=$RUNDIR/$testname.log
+    step "$testname: check resolv - store cnames"
+
+    ## www.luisguillen.com is a cname from vps01.luisguillen.com and its ip is 54.37.157.73
+
+    local resolved
+    resolved=`$DIGDNS @localhost -p 1053 +short A www.luisguillen.com 2>$testlog`
+    [ $? -ne 0 ] && step_err && return 1
+    echo $resolved >>$testlog
+    [ "$resolved" == "" ] && step_err && return 1
+
+    sleep 5
+    local result
+    local query="db.getCollection('resolvs').find({'name': 'www.luisguillen.com'})"
+    result=`$MONGOCLI --quiet $USECASE_ID --eval "$query" 2>>$testlog`
+    [ $? -ne 0 ] && step_err && return 1
+
+    echo "$result" | grep "vps01.luisguillen.com" &>>$testlog
+    [ $? -ne 0 ] && step_err && return 1
+
+    step_ok
+}
+
+
 ## run tests
 test01 || die "running test01"
 test02 || die "running test02"
+test03 || die "running test03"
