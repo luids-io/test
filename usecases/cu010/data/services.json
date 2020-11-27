@@ -6,7 +6,8 @@
 		"opts": {
 			"reason": "blacklisted",
 			"data": [ 
-				{ "resource": "domain", "format": "plain", "value": "www.facebook.com" }
+				{ "resource": "domain", "format": "plain", "value": "www.facebook.com" },
+				{ "resource": "domain", "format": "plain", "value": "vps01.luisguillen.com" }
 			]
 		}
 	}

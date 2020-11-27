@@ -1,0 +1,12 @@
+{
+	"id": "cu033",
+	"name": "Testeo básico de dns sinkhole checkeando all",
+	"tested": [ "xlistd", "xlistc", "ludns" ],
+	"stages": {
+		"prepare": "pre.sh",
+		"start": "start.sh",
+		"run": "run.sh",
+		"stop": "stop.sh",
+		"clean": "clean.sh"	
+	}
+}

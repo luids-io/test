@@ -1,0 +1,7 @@
+[
+    {
+        "id": "xlist-check",
+        "api": "luids.xlist.v1.Check",
+        "endpoint": "tcp://127.0.0.1:5801"
+    }
+]
