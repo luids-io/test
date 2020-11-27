@@ -4,11 +4,11 @@
         "type": "security",
         "codename": "dns.listed_domain",
         "tags": [ "blacklist", "dns" ],
-        "description": "Domain '[data.listed]' listed has been resolved by [data.remote]",
+        "description": "Domain '[data.name]' listed has been resolved by [data.remote] in query '[data.query]'",
         "fields": [
-            { "name": "query", "type": "string", "required": true },
-            { "name": "listed", "type": "string", "required": true },
             { "name": "remote", "type": "string", "required": true },
+            { "name": "query", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
             { "name": "reason", "type": "string" },
             { "name": "score", "type": "int" }
         ],
@@ -21,11 +21,11 @@
         "type": "security",
         "codename": "dns.unlisted_domain",
         "tags": [ "whitelist", "dns" ],
-        "description": "Domain '[data.listed]' unlisted has been resolved by [data.remote]",
+        "description": "Domain '[data.name]' unlisted has been resolved by [data.remote] in query '[data.query]'",
         "fields": [
-            { "name": "query", "type": "string", "required": true },
-            { "name": "listed", "type": "string", "required": true },
             { "name": "remote", "type": "string", "required": true },
+            { "name": "query", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
             { "name": "reason", "type": "string" },
             { "name": "score", "type": "int" }
         ],
@@ -38,11 +38,11 @@
         "type": "security",
         "codename": "dns.listed_ip",
         "tags": [ "blacklist", "dns" ],
-        "description": "IP [data.listed] listed has been resolved by [data.remote] in query '[data.query]'",
+        "description": "IP [data.name] listed has been resolved by [data.remote] in query '[data.query]'",
         "fields": [
-            { "name": "query", "type": "string", "required": true },
-            { "name": "listed", "type": "string", "required": true },
             { "name": "remote", "type": "string", "required": true },
+            { "name": "query", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
             { "name": "reason", "type": "string" },
             { "name": "score", "type": "int" }
         ],
@@ -55,11 +55,11 @@
         "type": "security",
         "codename": "dns.unlisted_ip",
         "tags": [ "whitelist", "dns" ],
-        "description": "IP [data.listed] unlisted has been resolved by [data.remote] in query '[data.query]'",
+        "description": "IP [data.name] unlisted has been resolved by [data.remote] in query '[data.query]'",
         "fields": [
-            { "name": "query", "type": "string", "required": true },
-            { "name": "listed", "type": "string", "required": true },
             { "name": "remote", "type": "string", "required": true },
+            { "name": "query", "type": "string", "required": true },
+            { "name": "name", "type": "string", "required": true },
             { "name": "reason", "type": "string" },
             { "name": "score", "type": "int" }
         ],
