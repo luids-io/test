@@ -27,7 +27,7 @@ test01() {
     grep -q "[domain]" $testlog
     [ $? -ne 0 ] && step_err && return 1
 
-    [ ! -f $VARDIR/lib/luids/xlist/sb-phising.db ] && step_err "database sb-phising not found" && return 1
+    [ ! -f $VARDIR/lib/luids/xlist/sb-phishing.db ] && step_err "database sb-phishing not found" && return 1
     [ ! -f $VARDIR/lib/luids/xlist/sb-malware.db ] && step_err "database sb-malware not found" && return 1
 
     step_ok
@@ -66,14 +66,14 @@ test03() {
 test04() {
     local testname=$FUNCNAME
     local testlog=$RUNDIR/$testname.log
-    step "$testname: check exists sb-phising"
+    step "$testname: check exists sb-phishing"
 
     ##2020-11-04: some listed domains: 
     local bldomains="fabriguard.com touroflimassol.com ymcmt.com zdravets.org shuklaenterprises.in rooijen.org codeaweb.net"
     $BINDIR/xlistc $bldomains &>$testlog
     [ $? -ne 0 ] && step_err && return 1
 
-    grep -q "sb-phising" $testlog
+    grep -q "sb-phishing" $testlog
     [ $? -ne 0 ] && step_err && return 1
 
     step_ok

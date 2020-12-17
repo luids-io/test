@@ -9,13 +9,13 @@
     }
   },
   {
-    "id": "sb-phising",
+    "id": "sb-phishing",
     "class": "sblookup",
     "resources": [ "domain" ],
     "opts": { 
       "apikey": "%APIKEY%",
-      "threats": [ "phising" ],
-      "reason": "found in 'sb-phising'"
+      "threats": [ "phishing" ],
+      "reason": "found in 'sb-phishing'"
     }
   },
   {
@@ -24,7 +24,7 @@
     "resources": [ "domain" ],
     "contains": [
       { "id": "sb-malware" }, 
-      { "id": "sb-phising" }
+      { "id": "sb-phishing" }
     ],
     "wrappers": [
       { "class": "cache", "opts": { "ttl": 300, "negativettl": -1 } }
