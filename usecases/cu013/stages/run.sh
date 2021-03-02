@@ -91,7 +91,37 @@ test03() {
 }
 
 
+test04() {
+    local testname=$FUNCNAME
+    local testlog=$RUNDIR/$testname.log
+    local stdoutlog=$RUNDIR/$testname-stdout.log
+    step "$testname: very basic test luarchivecli"
+
+    local list
+    list=`$BINDIR/luarchivecli listresolvs --clientip 127.0.0.1 2>$testlog >$stdoutlog`
+    [ $? -ne 0 ] && step_err "listresolvs --clientip 127.0.0.1" && return 1
+
+    local counter
+    counter=`cat $stdoutlog | wc -l`
+    [ $counter -ne 3 ] && step_err "invalid number of records: $counter" && return 1
+
+    local rid
+    rid=`$BINDIR/luarchivecli listresolvs --name www.google.com 2>>$testlog`
+    [ $? -ne 0 ] && step_err "listresolvs --name www.google.com" && return 1
+    rid=`echo $rid |cut -f1 -d","`
+
+    local tldplusone
+    tldplusone=`$BINDIR/luarchivecli getresolv $rid 2>>$testlog | grep "tldPlusOne" | cut -f2 -d":" | tr -d " "`
+    [ $? -ne 0 ] && step_err "getresolv" && return 1
+    [ $tldplusone != "google.com" ] && step_err "invalid tldplusone: $tldplusone" && return 1
+
+    step_ok
+}
+
+
+
 ## run tests
 test01 || die "running test01"
 test02 || die "running test02"
 test03 || die "running test03"
+test04 || die "running test04"
